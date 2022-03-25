@@ -13,28 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using Projekt_gr20.ViewModels;
-
-namespace Projekt_gr20
+namespace Projekt_gr20.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for UserProfileView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UserProfileView : UserControl
     {
-        public MainWindow()
+        public UserProfileView()
         {
             InitializeComponent();
-        }
-
-        private void Btn_UserProfile_Checked(object sender, RoutedEventArgs e)
-        {
-            DataContext = new UserProfileViewModel();
-
-        }
-        private void Btn_SearchView_Checked(object sender, RoutedEventArgs e)
-        {
-            DataContext = new SearchViewModel();
         }
     }
 }

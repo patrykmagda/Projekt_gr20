@@ -10,31 +10,32 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-
-using Projekt_gr20.ViewModels;
 
 namespace Projekt_gr20
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LoginWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginWindow : Window
     {
-        public MainWindow()
+        public LoginWindow()
         {
             InitializeComponent();
         }
 
-        private void Btn_UserProfile_Checked(object sender, RoutedEventArgs e)
+        // TODO: Dodac system logowania
+        private void Btn_Login_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new UserProfileViewModel();
+            // if (LogIn(username, password))
+            MainWindow mainWindow = new();
+            mainWindow.Show();
 
-        }
-        private void Btn_SearchView_Checked(object sender, RoutedEventArgs e)
+            this.Close();
+        }        
+        private void EXIT_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new SearchViewModel();
+            this.Close();
         }
     }
 }
